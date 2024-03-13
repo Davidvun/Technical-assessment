@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+    <title>Business Form</title>
+</h:head>
+<h:body>
+    <h:form>
+        <!-- Business Owner Details -->
+        <b:panel title="Business Owner Details">
+            <b:row>
+                <b:column>
+                    <b:inputText placeholder="Applicant Citizenship" value="#{formBean.applicantCitizenship}" />
+                </b:column>
+                <b:column>
+                    <b:inputText placeholder="Phone Number" value="#{formBean.phoneNumber}" />
+                </b:column>
+            </b:row>
+            <b:row>
+                <b:column>
+                    <b:inputText placeholder="Email Address" value="#{formBean.emailAddress}" />
+                </b:column>
+                <b:column>
+                    <b:inputText placeholder="Province" value="#{formBean.applicantProvince}" />
+                </b:column>
+            </b:row>
+        </b:panel>
+
+        <!-- Business Details -->
+        <b:panel title="Business Details">
+            <b:row>
+                <b:column>
+                    <b:inputText placeholder="Business Type" value="#{formBean.businessType}" />
+                </b:column>
+                <b:column>
+                    <b:inputText placeholder="Company Name" value="#{formBean.companyName}" />
+                </b:column>
+            </b:row>
+            <b:row>
+                <b:column>
+                    <b:inputText placeholder="TIN Number" value="#{formBean.tinNumber}" />
+                </b:column>
+                <b:column>
+                    <b:inputText placeholder="Registration Date" value="#{formBean.registrationDate}" />
+                </b:column>
+            </b:row>
+            <b:row>
+                <b:column>
+                    <b:inputText placeholder="Province" value="#{formBean.businessProvince}" />
+                </b:column>
+            </b:row>
+        </b:panel>
+
+        <!-- Product Information -->
+        <b:panel title="Product Information">
+            <b:row>
+                <b:column>
+                    <b:inputText placeholder="Purpose of Import" value="#{formBean.purposeOfImport}" />
+                </b:column>
+                <b:column>
+                    <b:inputText placeholder="Product Category" value="#{formBean.productCategory}" />
+                </b:column>
+            </b:row>
+            <b:row>
+                <b:column>
+                    <b:inputText placeholder="Weight" value="#{formBean.weight}" />
+                </b:column>
+                <b:column>
+                    <b:inputText placeholder="SI Unit" value="#{formBean.siUnit}" />
+                </b:column>
+            </b:row>
+            <b:row>
+                <b:column>
+                    <b:inputText placeholder="Quantity of Product" value="#{formBean.quantityOfProduct}" />
+                </b:column>
+            </b:row>
+            <b:row>
+                <b:column>
+                    <b:inputTextarea placeholder="Description of Products" value="#{formBean.productDescription}" />
+                </b:column>
+            </b:row>
+        </b:panel>
+
+        <!-- Submit Button -->
+    <h:form>
+    <!-- Your form fields here -->
+    <!-- Submit Button -->
+    <b:commandButton value="Submit" action="#{formBean.submitForm(formBean)}" />
+</h:form>
+
+    </h:form>
+</h:body>
+</html>
